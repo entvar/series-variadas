@@ -4,7 +4,8 @@ date: "2026-03-07"
 category: "Series"
 summary: "Este es un ejemplo de cómo se verán los posts de series con los botones de streaming debajo de la imagen."
 image: "https://via.placeholder.com/300x450/333/fff?text=Series+Poster"
-tags: ["ejemplo", "demo", "series"]
+tags: ["ejemplo", "demo", "series", "drama", "misterio"]
+genre: "drama"
 ---
 
 # Ejemplo de Serie
