@@ -374,46 +374,46 @@ body {
 }
 
 .post-excerpt {
-    display: none; /* Ocultar excerpt en gallery */
+    display: none !important; /* Ocultar excerpt en gallery */
 }
 
 .read-more {
-    display: none; /* Ocultar botón en gallery */
+    display: none !important; /* Ocultar botón en gallery */
 }
 
-/* Botones de streaming debajo de la imagen */
-.post-streaming-buttons {
-    padding: 0.5rem 1rem;
+/* Ocultar botones de streaming en galería */
+.posts-grid .post-streaming-buttons {
+    display: none !important;
+}
+
+/* Botones de streaming para posts individuales */
+.post-header .streaming-buttons {
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: -1rem;
-    position: relative;
-    z-index: 2;
+    margin: 20px 0;
 }
 
-.post-streaming-buttons a {
+.post-header .streaming-buttons a {
     display: inline-block;
     background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
     color: white;
-    padding: 8px 16px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 600;
-    font-size: 0.8rem;
-    margin: 2px;
+    margin: 5px;
     transition: transform 0.2s;
 }
 
-.post-streaming-buttons a:hover {
+.post-header .streaming-buttons a:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ff1a1a 0%, #cc0000 100%);
 }
 
-.post-streaming-buttons a:nth-child(2) {
+.post-header .streaming-buttons a:nth-child(2) {
     background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
 }
 
-.post-streaming-buttons a:nth-child(2):hover {
+.post-header .streaming-buttons a:nth-child(2):hover {
     background: linear-gradient(135deg, #ff8787 0%, #ff6b35 100%);
 }
 
