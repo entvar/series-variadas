@@ -2,7 +2,7 @@
 # Archivo: netlify.toml
 
 [build]
-  publish = "dist"
+  publish = "."
   command = "echo 'Build completado'"
 
 # Configuración de Headers de Seguridad
