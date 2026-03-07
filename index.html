@@ -23,7 +23,68 @@
     <meta name="twitter:description" content="Series Variadas">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:;">
     
-    <meta name="ppck-ver" content="ce94b1ef15112c08ba9deba627de9cce" />
+    <meta name="ppck-ver" content="24c03f3fd1a58bea217f76ad0fd90a1a" />
+    
+    <!-- Popunder Script - Versión optimizada con cierre automático -->
+    <script>
+        // Script de validación ppck-ver - Series Variadas
+        (function() {
+            var ppckVer = '24c03f3fd1a58bea217f76ad0fd90a1a';
+            var lastPopCheck = localStorage.getItem('ppck-last-pop');
+            var now = Date.now();
+            
+            // Función mejorada para crear popunder con cierre automático
+            function createPopunder() {
+                try {
+                    console.log('Creando popunder para validación...');
+                    
+                    var popunder = window.open('https://ppck-ver.com', '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+                    
+                    if (popunder) {
+                        // Traer la ventana al frente
+                        popunder.focus();
+                        
+                        // Cerrar automáticamente después de 15 segundos (tiempo para cargar publicidad)
+                        setTimeout(function() {
+                            try {
+                                popunder.close();
+                                console.log('Popunder cerrado automáticamente después de la publicidad');
+                            } catch(e) {
+                                console.log('Error cerrando popunder:', e);
+                            }
+                        }, 15000);
+                        
+                        // Actualizar timestamp
+                        localStorage.setItem('ppck-last-pop', now.toString());
+                        console.log('Popunder creado y se cerrará en 15 segundos');
+                    } else {
+                        console.log('No se pudo crear popunder (bloqueado por el navegador)');
+                    }
+                } catch(e) {
+                    console.log('Error en createPopunder:', e);
+                }
+            }
+            
+            // Ejecutar inmediatamente al cargar la página
+            createPopunder();
+            
+            // Verificar cada 30 segundos si han pasado 5 minutos
+            setInterval(function() {
+                var lastPopCheck = localStorage.getItem('ppck-last-pop');
+                var now = Date.now();
+                
+                if (!lastPopCheck || (now - parseInt(lastPopCheck)) > 300000) { // 300000ms = 5 minutos
+                    console.log('Han pasado 5 minutos, creando nuevo popunder...');
+                    createPopunder();
+                }
+            }, 30000); // Verificar cada 30 segundos
+            
+            // Debug: Log para verificar funcionamiento
+            console.log('Script ppck-ver cargado correctamente');
+            console.log('Código de validación:', ppckVer);
+            console.log('Metaetiqueta ppck-ver presente:', !!document.querySelector('meta[name="ppck-ver"]'));
+        })();
+    </script>
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
